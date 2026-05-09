@@ -1,5 +1,6 @@
 Manifest-Version: 1.0
 Main-Class: CmLogistics
+<<<<<<< HEAD
 Class-Path: file:/C:/Users/garci/OneDrive/Documentos/ING4/coffeeMachine/
  Code-2023-04-14/coffeemach/bodegaCentral/build/libs/bodegaCentral.jar f
  ile:/C:/Users/garci/.gradle/caches/modules-2/files-2.1/com.zeroc/ice/3.
@@ -9,4 +10,15 @@ Class-Path: file:/C:/Users/garci/OneDrive/Documentos/ING4/coffeeMachine/
  le:/C:/Users/garci/.gradle/caches/modules-2/files-2.1/org.checkerframew
  ork/checker-qual/3.5.0/2f50520c8abea66fbd8d26e481d3aef5c673b510/checker
  -qual-3.5.0.jar
+=======
+Class-Path: file:/C:/Users/Hector%20Giraldo/Documents/COMPU_2/tareaInges
+ oft/coffeemach/bodegaCentral/build/libs/bodegaCentral.jar file:/C:/User
+ s/Hector%20Giraldo/.gradle/caches/modules-2/files-2.1/com.zeroc/ice/3.7
+ .6/6c7f86b7f9e5f0804a7307077e6c058d8a93fa70/ice-3.7.6.jar file:/C:/User
+ s/Hector%20Giraldo/.gradle/caches/modules-2/files-2.1/org.postgresql/po
+ stgresql/42.3.1/9ca7df660e875b91c78e3d1608d4d7469ad3470c/postgresql-42.
+ 3.1.jar file:/C:/Users/Hector%20Giraldo/.gradle/caches/modules-2/files-
+ 2.1/org.checkerframework/checker-qual/3.5.0/2f50520c8abea66fbd8d26e481d
+ 3aef5c673b510/checker-qual-3.5.0.jar
+>>>>>>> b337b919ffd20fd5908617d270223dae76577ed3
 

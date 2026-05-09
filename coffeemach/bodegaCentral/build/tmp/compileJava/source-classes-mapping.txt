@@ -28,6 +28,14 @@ servicios/ServicioAbastecimientoPrx.java
  servicios.ServicioAbastecimientoPrx
 guiInventario/Interfaz.java
  guiInventario.Interfaz
+ guiInventario.Interfaz$1
+ guiInventario.Interfaz$2
+ guiInventario.Interfaz$3
+ guiInventario.Interfaz$4
+ guiInventario.Interfaz$5
+ guiInventario.Interfaz$6
+ guiInventario.Interfaz$7
+ guiInventario.Interfaz$8
 servicios/StringSeqHelper.java
  servicios.StringSeqHelper
 servicios/VentaServicePrx.java

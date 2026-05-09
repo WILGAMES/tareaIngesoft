@@ -1,4 +1,5 @@
 <state>
+<<<<<<< HEAD
   <timestamp value='1778364601697' />
   <sourceSet name='default'>
     <source name='C:\Users\garci\OneDrive\Documentos\ING4\coffeeMachine\Code-2023-04-14\coffeemach\CoffeMach.ice'>
@@ -20,6 +21,29 @@
       <file name='C:\Users\garci\OneDrive\Documentos\ING4\coffeeMachine\Code-2023-04-14\coffeemach\cmLogistics\build\generated-src\servicios\_VentaServicePrxI.java' />
       <file name='C:\Users\garci\OneDrive\Documentos\ING4\coffeeMachine\Code-2023-04-14\coffeemach\cmLogistics\build\generated-src\servicios\RecetaServicePrx.java' />
       <file name='C:\Users\garci\OneDrive\Documentos\ING4\coffeeMachine\Code-2023-04-14\coffeemach\cmLogistics\build\generated-src\servicios\_RecetaServicePrxI.java' />
+=======
+  <timestamp value='1778366713634' />
+  <sourceSet name='default'>
+    <source name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\CoffeMach.ice'>
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\ServicioComLogistica.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\ServicioAbastecimiento.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\Moneda.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\AlarmaService.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\VentaService.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\RecetaService.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\StringSeqHelper.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\MapStrIntHelper.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\ServicioComLogisticaPrx.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\_ServicioComLogisticaPrxI.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\ServicioAbastecimientoPrx.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\_ServicioAbastecimientoPrxI.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\AlarmaServicePrx.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\_AlarmaServicePrxI.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\VentaServicePrx.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\_VentaServicePrxI.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\RecetaServicePrx.java' />
+      <file name='C:\Users\Hector Giraldo\Documents\COMPU_2\tareaIngesoft\coffeemach\cmLogistics\build\generated-src\servicios\_RecetaServicePrxI.java' />
+>>>>>>> b337b919ffd20fd5908617d270223dae76577ed3
     </source>
     <arg value='C:\Program Files\ZeroC\Ice-3.7.11\\bin\slice2java.exe' />
     <arg value='-IC:\Program Files\ZeroC\Ice-3.7.11\\slice' />
