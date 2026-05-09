@@ -1,9 +1,10 @@
 import java.util.*;
+import javax.swing.SwingUtilities;
 import com.zeroc.Ice.*;
 import servicios.ServicioAbastecimientoImpl;
 import bodega.Bodega;
 import bodega.BodegaImpl;
-
+import interfaz.InterfazCmLogistics;
 
 public class CmLogistics {
     
@@ -18,21 +19,23 @@ public class CmLogistics {
             
             ObjectAdapter adapter = communicator.createObjectAdapter("CmLogistics");
             
-       
             bodega = new BodegaImpl();
             System.out.println("Bodega inicializada");
             
-      
             servicioAbastecimiento = new ServicioAbastecimientoImpl(bodega);
             System.out.println("Servicio de Abastecimiento inicializado");
             
-      
             adapter.add(servicioAbastecimiento, Util.stringToIdentity("Abastecimiento"));
             System.out.println("Servicio registrado como: Abastecimiento");
  
             adapter.activate();
             System.out.println("Adaptador activado");
             System.out.println("\n=== Cm_logistics en línea ===\n");
+
+            SwingUtilities.invokeLater(() -> {
+                InterfazCmLogistics interfaz = new InterfazCmLogistics(servicioAbastecimiento);
+                interfaz.setVisible(true);
+            });
         
             communicator.waitForShutdown();
             

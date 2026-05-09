@@ -13,6 +13,11 @@ servicios/_AlarmaServicePrxI.java
  servicios._AlarmaServicePrxI
 servicios/_ServicioComLogisticaPrxI.java
  servicios._ServicioComLogisticaPrxI
+interfaz/InterfazCmLogistics.java
+ interfaz.InterfazCmLogistics
+ interfaz.InterfazCmLogistics$1
+ interfaz.InterfazCmLogistics$2
+ interfaz.InterfazCmLogistics$3
 servicios/_VentaServicePrxI.java
  servicios._VentaServicePrxI
 servicios/AlarmaService.java
