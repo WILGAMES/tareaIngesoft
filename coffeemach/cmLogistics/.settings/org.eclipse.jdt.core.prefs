@@ -1,22 +1,15 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=b337b919ffd20fd5908617d270223dae76577ed3
 eclipse.preferences.version=1
 org.eclipse.jdt.core.classpath.outputOverlappingAnotherSource=ignore
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
-<<<<<<< HEAD
-org.eclipse.jdt.core.compiler.codegen.targetPlatform=11
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=18
 org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve
-org.eclipse.jdt.core.compiler.compliance=11
-=======
-org.eclipse.jdt.core.compiler.codegen.targetPlatform=27
-org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve
-org.eclipse.jdt.core.compiler.compliance=27
->>>>>>> b337b919ffd20fd5908617d270223dae76577ed3
+org.eclipse.jdt.core.compiler.compliance=18
 org.eclipse.jdt.core.compiler.debug.lineNumber=generate
 org.eclipse.jdt.core.compiler.debug.localVariable=generate
 org.eclipse.jdt.core.compiler.debug.sourceFile=generate
 org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
 org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
-<<<<<<< HEAD
-org.eclipse.jdt.core.compiler.source=11
-=======
-org.eclipse.jdt.core.compiler.source=27
->>>>>>> b337b919ffd20fd5908617d270223dae76577ed3
+org.eclipse.jdt.core.compiler.source=18
