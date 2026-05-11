@@ -1,79 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" output="build/resources/test" path="src/test/resources">
+	<classpathentry kind="src" output="bin/main" path="src/main/resources">
 		<attributes>
-			<attribute name="test" value="true"/>
-			<attribute name="optional" value="true"/>
-			<attribute name="gradle.buildServer" value="true"/>
-			<attribute name="resource" value="true"/>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="build/classes/java/test" path="src/test/java">
+	<classpathentry kind="src" output="bin/main" path="src/main/java">
 		<attributes>
-			<attribute name="test" value="true"/>
-			<attribute name="optional" value="true"/>
-			<attribute name="gradle.buildServer" value="true"/>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="build/resources/main" path="src/main/resources">
+	<classpathentry kind="src" output="bin/main" path="build/generated-src">
 		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="gradle.buildServer" value="true"/>
-			<attribute name="resource" value="true"/>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="build/classes/java/main" path="src/main/java">
-		<attributes>
-			<attribute name="gradle.buildServer" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" output="build/classes/java/test" path="build/generated/sources/annotationProcessor/java/test">
-		<attributes>
-			<attribute name="test" value="true"/>
-			<attribute name="optional" value="true"/>
-			<attribute name="gradle.buildServer" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" output="build/classes/java/main" path="build/generated/sources/annotationProcessor/java/main">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="gradle.buildServer" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" output="build/classes/java/main" path="build/generated-src">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="gradle.buildServer" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
-		<attributes>
-			<attribute name="gradle.buildServer" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/garci/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.5.0/2f50520c8abea66fbd8d26e481d3aef5c673b510/checker-qual-3.5.0.jar" sourcepath="C:/Users/garci/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.5.0/acb4745ac343906cd39f9b3776db0e56f251ae6e/checker-qual-3.5.0-sources.jar">
-		<attributes>
-			<attribute name="gradle.buildServer" value="true"/>
-			<attribute name="groupId" value="org.checkerframework"/>
-			<attribute name="artifactId" value="checker-qual"/>
-			<attribute name="version" value="3.5.0"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/garci/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/42.3.1/9ca7df660e875b91c78e3d1608d4d7469ad3470c/postgresql-42.3.1.jar" sourcepath="C:/Users/garci/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/42.3.1/1782e9d4a83e1167d8da1b7a7a9e3b078743a26b/postgresql-42.3.1-sources.jar">
-		<attributes>
-			<attribute name="gradle.buildServer" value="true"/>
-			<attribute name="groupId" value="org.postgresql"/>
-			<attribute name="artifactId" value="postgresql"/>
-			<attribute name="version" value="42.3.1"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/garci/.gradle/caches/modules-2/files-2.1/com.zeroc/ice/3.7.6/6c7f86b7f9e5f0804a7307077e6c058d8a93fa70/ice-3.7.6.jar" sourcepath="C:/Users/garci/.gradle/caches/modules-2/files-2.1/com.zeroc/ice/3.7.6/fa214d0f6e9e0adb8f830bf4837efc6fe487ba56/ice-3.7.6-sources.jar">
-		<attributes>
-			<attribute name="gradle.buildServer" value="true"/>
-			<attribute name="groupId" value="com.zeroc"/>
-			<attribute name="artifactId" value="ice"/>
-			<attribute name="version" value="3.7.6"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-18/"/>
+	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
+	<classpathentry kind="output" path="bin/default"/>
 </classpath>
