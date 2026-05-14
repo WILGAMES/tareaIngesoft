@@ -36,12 +36,6 @@ subprojects {
         // https://mvnrepository.com/artifact/org.postgresql/postgresql
         implementation 'org.postgresql:postgresql:42.3.1'
     }
-
-    if (project.name == 'cmLogistics') {
-        dependencies {
-            implementation project(':bodegaCentral')
-        }
-    }
  
   
    jar {

@@ -1,56 +1,79 @@
 import java.util.*;
-import javax.swing.SwingUtilities;
 import com.zeroc.Ice.*;
-import servicios.ServicioAbastecimientoImpl;
-import bodega.Bodega;
-import bodega.BodegaImpl;
-import interfaz.InterfazCmLogistics;
+import logistica.LogisticaService;
+import logistica.AbastecimientoService;
+import gui.InterfazLogistica;
+import controlAlarma.AlarmaLogistica;
+import controlAlarma.GestorAlarmaLogistica;
+import tecnicoMantenimiento.TecnicoManager;
+import zonaGeografica.GestorZonas;
 
 public class CmLogistics {
-    
-    private static Communicator communicator;
-    private static ServicioAbastecimientoImpl servicioAbastecimiento;
-    private static Bodega bodega;
-    
     public static void main(String[] args) {
         List<String> extArgs = new ArrayList<>();
-        try {
-            communicator = Util.initialize(args, "CmLogistic.cfg", extArgs);
-            
+        try (Communicator communicator = Util.initialize(args, "CmLogistic.cfg", extArgs)) {
             ObjectAdapter adapter = communicator.createObjectAdapter("CmLogistics");
             
-            bodega = new BodegaImpl();
-            System.out.println("Bodega inicializada");
+            // Inicializar gestores base
+            TecnicoManager tecnicoManager = new TecnicoManager();
+            GestorZonas gestorZonas = new GestorZonas();
             
-            servicioAbastecimiento = new ServicioAbastecimientoImpl(bodega);
-            System.out.println("Servicio de Abastecimiento inicializado");
+            // Registrar técnicos de ejemplo
+            tecnicoManager.registrarTecnico(1, "Juan Pérez", "Entrega");
+            tecnicoManager.registrarTecnico(2, "María García", "Mantenimiento");
+            tecnicoManager.registrarTecnico(3, "Carlos López", "Reparación");
             
-            adapter.add(servicioAbastecimiento, Util.stringToIdentity("Abastecimiento"));
-            System.out.println("Servicio registrado como: Abastecimiento");
- 
+            // Registrar zonas geográficas de ejemplo
+            gestorZonas.crearZona(1, "Centro", "Calle Principal 100", 10.5, -20.3);
+            gestorZonas.crearZona(2, "Norte", "Av. Norte 500", 10.6, -20.2);
+            gestorZonas.crearZona(3, "Sur", "Av. Sur 200", 10.4, -20.4);
+            
+            // Inicializar servicios de logística
+            LogisticaService logisticaService = new LogisticaService();
+            AbastecimientoService abastecimientoService = new AbastecimientoService();
+            
+            // Inicializar gestor de alarmas
+            GestorAlarmaLogistica gestorAlarmas = new GestorAlarmaLogistica(tecnicoManager, gestorZonas);
+            
+            // Inicializar alarmas con el gestor
+            AlarmaLogistica alarmaLogistica = new AlarmaLogistica(logisticaService, gestorAlarmas);
+            
+            // Inicializar GUI
+            InterfazLogistica interfazLogistica = new InterfazLogistica();
+            interfazLogistica.setLogisticaService(logisticaService);
+            interfazLogistica.setTecnicoManager(tecnicoManager);
+            interfazLogistica.setGestorZonas(gestorZonas);
+            
+            // Registrar servicios en el adapter
+            adapter.add(logisticaService, Util.stringToIdentity("logistica"));
+            adapter.add(abastecimientoService, Util.stringToIdentity("abastecer"));
+            adapter.add(alarmaLogistica, Util.stringToIdentity("alarmas"));
+            
             adapter.activate();
-            System.out.println("Adaptador activado");
-            System.out.println("\n=== Cm_logistics en línea ===\n");
-
-            SwingUtilities.invokeLater(() -> {
-                InterfazCmLogistics interfaz = new InterfazCmLogistics(servicioAbastecimiento);
-                interfaz.setVisible(true);
-            });
-        
-            communicator.waitForShutdown();
+            System.out.println("[CmLogistics] ========================================");
+            System.out.println("[CmLogistics] Servicio de logística iniciado");
+            System.out.println("[CmLogistics] Gestor de técnicos iniciado (3 técnicos)");
+            System.out.println("[CmLogistics] Gestor de zonas geográficas iniciado (3 zonas)");
+            System.out.println("[CmLogistics] Sistema de alarmas inicializado");
+            System.out.println("[CmLogistics] ========================================");
+            System.out.println();
             
-        } catch (java.lang.Exception e) {
-            System.err.println("Error en Cm_logistics: " + e.getMessage());
-            e.printStackTrace();
-        } finally {
-            if (communicator != null) {
-                try {
-                    communicator.destroy();
-                    System.out.println("Cm_logistics finalizado");
-                } catch (java.lang.Exception e) {
-                    System.err.println("Error al destruir communicator: " + e.getMessage());
+            // Thread para monitoreo periódico de alarmas
+            Thread monitorAlarmas = new Thread(() -> {
+                while (!Thread.currentThread().isInterrupted()) {
+                    try {
+                        Thread.sleep(60000); // Cada 60 segundos
+                        gestorAlarmas.mostrarEstadisticas();
+                        logisticaService.mostrarEstadisticasEntregas();
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
                 }
-            }
+            });
+            monitorAlarmas.setDaemon(true);
+            monitorAlarmas.start();
+            
+            communicator.waitForShutdown();
         }
     }
 }
