@@ -4,6 +4,7 @@ import com.zeroc.Ice.*;
 import bodega.BodegaService;
 import alarma.AlarmaBodega;
 import alarma.GestorAlarmaBodega;
+import guiInventario.Interfaz;
 
 public class BodegaCentral {
 
@@ -21,7 +22,12 @@ public class BodegaCentral {
             // Inicializar alarmas con el gestor
             AlarmaBodega alarma = new AlarmaBodega(bodega, gestorAlarmas);
 
-            adapter.add(bodega, Util.stringToIdentity("Bodega"));
+            // Inicializar GUI de bodega central
+            Interfaz interfaz = new Interfaz();
+            interfaz.setBodegaService(bodega);
+            interfaz.iniciar();
+
+            //adapter.add(bodega, Util.stringToIdentity("Bodega"));
             adapter.add(alarma, Util.stringToIdentity("Alarmas"));
             adapter.activate();
 

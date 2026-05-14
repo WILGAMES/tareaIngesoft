@@ -43,6 +43,7 @@ public class CmLogistics {
             interfazLogistica.setLogisticaService(logisticaService);
             interfazLogistica.setTecnicoManager(tecnicoManager);
             interfazLogistica.setGestorZonas(gestorZonas);
+            interfazLogistica.iniciar();
             
             // Registrar servicios en el adapter
             adapter.add(logisticaService, Util.stringToIdentity("logistica"));
